@@ -13,8 +13,8 @@ const server = app.listen(3001, ()=>{
 
 io = require('socket.io')(server, {
   cors: {
-    origin: "http://passionproject-client.herokuapp.com",
-    credentials: true
+    origin: "*",    
+    methods: ["GET", "POST"]  
   }
 });
 
