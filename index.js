@@ -12,11 +12,9 @@ const server = app.listen(3001, ()=>{
 });
 
 io = require('socket.io')(server, {
-  transports: ['websocket', 'polling', 'flashsocket'],
   cors: {
     origin: "http://passionproject-client.vercel.app",
-    credentials: true,
-    methods: ["GET", "POST"]
+    credentials: true
   }
 });
 
