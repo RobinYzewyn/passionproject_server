@@ -20,7 +20,7 @@ io = require('socket.io')(server, {
 
 io.on('connection', (socket) =>{
   socket.on('changePositionData', (data)=>{
-    socket.to(room).emit('receive_positiondata', data.data);
+    socket.to(data.room).emit('receive_positiondata', data.data);
   })
 
   socket.on('soldProperty', (room)=>{
